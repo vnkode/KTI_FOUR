@@ -1,6 +1,27 @@
-[theme]
+[client]
+showErrorDetails = "none"
+
+theme = {  }
 primaryColor="#3e778a"
 backgroundColor="#1f2e58"
 secondaryBackgroundColor="#16141c"
 textColor="#aa7111"
 font="serif"
+
+[runner]
+
+# Allows you to type a variable or string by itself in a single line of
+# Python code to write it to the app.
+#
+# Default: true
+magicEnabled = true
+
+# Handle script rerun requests immediately, rather than waiting for
+# script execution to reach a yield point.
+#
+# This makes Streamlit much more responsive to user interaction, but it
+# can lead to race conditions in apps that mutate session_state data
+# outside of explicit session_state assignment statements.
+#
+# Default: true
+fastReruns = true
