@@ -7,6 +7,8 @@ certifi==2024.7.4
 charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
+dotenv==17.2.3
+python-dotenv==0.0.1-security
 gitdb==4.0.11
 GitPython==3.1.43
 google-ai-generativelanguage==0.6.6
