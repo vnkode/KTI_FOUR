@@ -1,6 +1,20 @@
 # file output
 canvas.png
 
+# unreadable files
+c:\Users\user\.vscode\extensions\idleberg.icon-fonts-2.5.4\snippets\jsx\geomicon.json')
+at Kkt.G (vscode-file://vscode-app/c:/Users/user/AppData/Local/Programs/VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3828:65903)
+at Kkt.F (vscode-file://vscode-app/c:/Users/user/AppData/Local/Programs/VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3828:65728)
+at async Kkt.C (vscode-file://vscode-app/c:/Users/user/AppData/Local/Programs/VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3828:65095)
+at async dIt.readExtensionResource (vscode-file://vscode-app/c:/Users/user/AppData/Local/Programs/VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3862:2691)
+at async Promise.all (index 76)
+at async X_e.getSnippets (vscode-file://vscode-app/c:/Users/user/AppData/Local/Programs/VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:577:20159)
+at async CRi (vscode-file://vscode-app/c:/Users/user/AppData/Local/Programs/VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3121:5060)
+at async y0t.provideCodeActions (vscode-file://vscode-app/c:/Users/user/AppData/Local/Programs/VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3121:6059)
+at async vscode-file://vscode-app/c:/Users/user/AppData/Local/Programs/VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:425:81214
+at async Promise.all (index 5) file:///c%3A/Users/user/.vscode/extensions/idleberg.icon-fonts-2.5.4/snippets/jsx/geomicon.json
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
