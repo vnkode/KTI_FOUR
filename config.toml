@@ -1,15 +1,13 @@
 [client]
 showErrorDetails = "none"
 
-theme = {  }
-primaryColor="#3e778a"
-backgroundColor="#1f2e58"
-secondaryBackgroundColor="#16141c"
-textColor="#aa7111"
-font="serif"
+[theme]
+primaryColor="#4e9492"
+backgroundColor="#182241"
+secondaryBackgroundColor="#1d1e33"
+textColor="#9c802e"
 
 [runner]
-
 # Allows you to type a variable or string by itself in a single line of
 # Python code to write it to the app.
 #
