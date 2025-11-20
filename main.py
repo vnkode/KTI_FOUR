@@ -56,9 +56,9 @@ if 'canvas' not in st.session_state:
 canvas_result = st_canvas(
     fill_color="rgba(255, 165, 0, 0.3)", 
     stroke_width=2,
-    stroke_color="#D2CDB8",
-    background_color="#121322",
-    width=800, 
+    stroke_color="#08081a",
+    background_color="#c7ab8f",
+    width=760, 
     height=480,
     drawing_mode="freedraw",
     key="canvas",
@@ -79,4 +79,5 @@ if st.button("Solve"):
         
 
         st.markdown(response)
+
 
