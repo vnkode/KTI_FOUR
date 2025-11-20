@@ -58,7 +58,7 @@ canvas_result = st_canvas(
     fill_color="rgba(229, 171, 19, 0.8)", 
     stroke_width=2,
     stroke_color="#08081a",
-    background_color="#c7ab8f",
+    background_color="#d9cdbf",
     width=800, 
     height=480,
     drawing_mode="freedraw",
@@ -80,6 +80,7 @@ if st.button("Solve"):
         
 
         st.markdown(response)
+
 
 
 
