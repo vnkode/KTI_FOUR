@@ -58,14 +58,14 @@ canvas_result = st_canvas(
     stroke_width=2,
     stroke_color="#D2CDB8",
     background_color="#121322",
-    width=900, 
+    width=800, 
     height=480,
     drawing_mode="freedraw",
     key="canvas",
     update_streamlit=True,
 )
 
-if st.button("Analisis"): 
+if st.button("Solve"): 
     if canvas_result.image_data is not None: 
         
         img = Image.fromarray(canvas_result.image_data.astype("uint8"), 'RGBA')
@@ -79,3 +79,4 @@ if st.button("Analisis"):
         
 
         st.markdown(response)
+
