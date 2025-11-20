@@ -58,7 +58,7 @@ canvas_result = st_canvas(
     stroke_width=2,
     stroke_color="#D2CDB8",
     background_color="#121322",
-    width=640, 
+    width=900, 
     height=480,
     drawing_mode="freedraw",
     key="canvas",
@@ -77,4 +77,5 @@ if st.button("Analisis"):
         
         response = gemini_api.get_response("canvas.png", user_prompt)
         
+
         st.markdown(response)
