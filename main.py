@@ -48,8 +48,19 @@ if not api_key:
 
 gemini_api = GeminiAPI(api_key)
 
-new_background = '<div style="background-color:#fff"</div>'
-st.markdown(new_background, unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://t3.ftcdn.net/jpg/03/29/41/98/360_F_329419895_2LKInappp1st56Vvb35lo9bxb2Zppawh.jpg")
+    }
+   .sidebar .sidebar-content {
+        background: url("url_goes_here")
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 new_title = '<p style="font-family:tahoma; color:#a67a16; font-size: 42px;"><b>CalcSketch | KTI Demo</b></p>'
 st.markdown(new_title, unsafe_allow_html=True)
@@ -83,6 +94,7 @@ if st.button("Solve"):
         
 
         st.markdown(response)
+
 
 
 
