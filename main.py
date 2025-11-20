@@ -48,7 +48,7 @@ if not api_key:
 
 gemini_api = GeminiAPI(api_key)
 
-st.title("Math Scratch Note | KTI Demo")
+st.title("CalcSketch | KTI Demo")
 
 if 'canvas' not in st.session_state:
     st.session_state.canvas = np.zeros((480, 640, 3), dtype="uint8")
@@ -58,7 +58,7 @@ canvas_result = st_canvas(
     stroke_width=2,
     stroke_color="#08081a",
     background_color="#c7ab8f",
-    width=760, 
+    width=800, 
     height=480,
     drawing_mode="freedraw",
     key="canvas",
@@ -79,5 +79,6 @@ if st.button("Solve"):
         
 
         st.markdown(response)
+
 
 
