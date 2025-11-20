@@ -48,7 +48,8 @@ if not api_key:
 
 gemini_api = GeminiAPI(api_key)
 
-st.title("CalcSketch | KTI Demo")
+new_title = '<p style="font-family:tahoma; color:#a67a16; font-size: 42px;">CalcSketch | KTI Demo</p>'
+st.markdown(new_title, unsafe_allow_html=True)
 
 if 'canvas' not in st.session_state:
     st.session_state.canvas = np.zeros((480, 640, 3), dtype="uint8")
@@ -79,6 +80,7 @@ if st.button("Solve"):
         
 
         st.markdown(response)
+
 
 
 
