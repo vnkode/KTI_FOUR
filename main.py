@@ -75,7 +75,7 @@ st.stylable_container(
         font-size: 18px;
     }
     """
-):
+);
     
 st.button("Solve")
 if st.button(): 
@@ -91,6 +91,7 @@ if st.button():
         response = gemini_api.get_response("canvas.png", user_prompt)
         
         st.markdown(response)
+
 
 
 
