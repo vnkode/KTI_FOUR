@@ -48,10 +48,10 @@ if not api_key:
 
 gemini_api = GeminiAPI(api_key)
 
-def set_bg_from_url(image_url):
+def set_bg_from_url(https://cdn.wallpapersafari.com/48/28/Z7sNdR.jpg):
     st.markdown(
         f.stApp [{
-            image_url == background: url("https://cdn.wallpapersafari.com/48/28/Z7sNdR.jpg"),
+            background: url("https://cdn.wallpapersafari.com/48/28/Z7sNdR.jpg"),
             background-size: cover,
             background-repeat: no-repeat,
             background-attachment: fixed,
@@ -90,6 +90,7 @@ if st.button("Solve"):
         response = gemini_api.get_response("canvas.png", user_prompt)
         
         st.markdown(response)
+
 
 
 
