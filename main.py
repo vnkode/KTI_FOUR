@@ -20,7 +20,7 @@ class GeminiAPI:
 
     def get_response(self, image_path, prompt):
         base64_image = self.image_to_base64(image_path)
-        
+
         payload = {
             "contents": [{
                 "parts": [
@@ -48,35 +48,45 @@ if not api_key:
 
 gemini_api = GeminiAPI(api_key)
 
-st.title("Math Scratch Note | KTI Demo")
+
+
+
+
+
+
+
+
+
+
+
+new_title = '<p style="font-family:tahoma; color:#a67a16; font-size: 42px;"><b>⚛︎ CalcSketch | KTI Demo</b></p>'
+st.markdown(new_title, unsafe_allow_html=True)
 
 if 'canvas' not in st.session_state:
     st.session_state.canvas = np.zeros((480, 640, 3), dtype="uint8")
 
 canvas_result = st_canvas(
-    fill_color="rgba(255, 165, 0, 0.3)", 
+    fill_color="rgba(229, 171, 19, 0.8)", 
     stroke_width=2,
-    stroke_color="#D2CDB8",
-    background_color="#121322",
-    width=480, 
+    stroke_color="#08081a",
+    background_color="#baa488",
+    width=800, 
     height=480,
     drawing_mode="freedraw",
     key="canvas",
     update_streamlit=True,
 )
 
-if st.button("Analisis"): 
+if st.button("Solve"): 
     if canvas_result.image_data is not None: 
-        
+
         img = Image.fromarray(canvas_result.image_data.astype("uint8"), 'RGBA')
         img.save("canvas.png")
-        
+
         user_prompt = "Selesaikan masalah matematika yang digambar. Berikan hanya jawaban akhir yang paling ringkas dan langkah-langkah perhitungan yang paling penting. Format output secara ketat menggunakan Markdown, dan gunakan LaTeX diapit oleh $$ untuk semua persamaan."
 
         st.header("Hasil")
-        
+
         response = gemini_api.get_response("canvas.png", user_prompt)
-        
+
         st.markdown(response)
-
-
