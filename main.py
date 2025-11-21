@@ -66,7 +66,19 @@ canvas_result = st_canvas(
     update_streamlit=True,
 )
 
-if st.button("Solve"): 
+with st.stylable_container(
+    key="my_button_container",
+    css_styles="""
+    button {
+        background-color: #FF0000;
+        color: white;
+        font-size: 18px;
+    }
+    """
+):
+    
+st.button("Solve")
+if st.button(): 
     if canvas_result.image_data is not None: 
         
         img = Image.fromarray(canvas_result.image_data.astype("uint8"), 'RGBA')
@@ -78,8 +90,8 @@ if st.button("Solve"):
         
         response = gemini_api.get_response("canvas.png", user_prompt)
         
-
         st.markdown(response)
+
 
 
 
