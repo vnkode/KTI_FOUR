@@ -6,7 +6,6 @@ from PIL import Image
 from dotenv import load_dotenv
 import base64
 import requests
-from streamlit_extras.stylable_container import stylable_container
 
 load_dotenv(".env")
 
@@ -67,15 +66,6 @@ canvas_result = st_canvas(
     update_streamlit=True,
 )
  
-st.stylable_container(
-    key="my_button_container",
-    css_styles="""
-    button {
-        background-color: #FF0000;
-        color: white;
-    }
-    """
-)
 if st.button("Solve"): 
     if canvas_result.image_data is not None: 
         
@@ -89,3 +79,4 @@ if st.button("Solve"):
         response = gemini_api.get_response("canvas.png", user_prompt)
         
         st.markdown(response)
+
