@@ -48,25 +48,24 @@ if not api_key:
 
 gemini_api = GeminiAPI(api_key)
 
-new_title = '<p style="font-family:tahoma; color:#a67a16; font-size: 42px;"><b>⚛︎ CalcSketch | KTI Demo</b></p>'
-st.markdown(new_title, unsafe_allow_html=True)
+st.title("Math Scratch Note | KTI Demo")
 
 if 'canvas' not in st.session_state:
     st.session_state.canvas = np.zeros((480, 640, 3), dtype="uint8")
 
 canvas_result = st_canvas(
-    fill_color="rgba(229, 171, 19, 0.8)", 
+    fill_color="rgba(255, 165, 0, 0.3)", 
     stroke_width=2,
-    stroke_color="#08081a",
-    background_color="#baa488",
-    width=800, 
+    stroke_color="#D2CDB8",
+    background_color="#121322",
+    width=640, 
     height=480,
     drawing_mode="freedraw",
     key="canvas",
     update_streamlit=True,
 )
- 
-if st.button("Solve"): 
+
+if st.button("Analisis"): 
     if canvas_result.image_data is not None: 
         
         img = Image.fromarray(canvas_result.image_data.astype("uint8"), 'RGBA')
@@ -79,14 +78,4 @@ if st.button("Solve"):
         response = gemini_api.get_response("canvas.png", user_prompt)
         
         st.markdown(response)
-
-
-
-
-
-
-
-
-
-
 
