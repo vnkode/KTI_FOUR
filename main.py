@@ -48,17 +48,6 @@ if not api_key:
 
 gemini_api = GeminiAPI(api_key)
 
-def set_bg_from_url(https://cdn.wallpapersafari.com/48/28/Z7sNdR.jpg):
-    st.markdown(
-        f.stApp [{
-            background: url("https://cdn.wallpapersafari.com/48/28/Z7sNdR.jpg"),
-            background-size: cover,
-            background-repeat: no-repeat,
-            background-attachment: fixed,
-        }],
-        unsafe_allow_html=True
-    )
-
 new_title = '<p style="font-family:tahoma; color:#a67a16; font-size: 42px;"><b>⚛︎ CalcSketch | KTI Demo</b></p>'
 st.markdown(new_title, unsafe_allow_html=True)
 
@@ -90,6 +79,7 @@ if st.button("Solve"):
         response = gemini_api.get_response("canvas.png", user_prompt)
         
         st.markdown(response)
+
 
 
 
