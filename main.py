@@ -64,6 +64,7 @@ canvas_result = st_canvas(
     drawing_mode="freedraw",
     key="canvas",
     update_streamlit=True,
+)
 
 st.stylable_container(
     key="my_button_container",
@@ -89,6 +90,7 @@ if st.button():
         response = gemini_api.get_response("canvas.png", user_prompt)
         
         st.markdown(response)
+
 
 
 
