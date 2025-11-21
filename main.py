@@ -55,7 +55,7 @@ def set_bg_from_url(image_url):
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-        }]
+        }],
         unsafe_allow_html=True
     )
 
@@ -90,6 +90,7 @@ if st.button("Solve"):
         response = gemini_api.get_response("canvas.png", user_prompt)
         
         st.markdown(response)
+
 
 
 
